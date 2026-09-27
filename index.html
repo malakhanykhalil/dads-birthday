@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Dad ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Great+Vibes&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8f4;
+    color: #3b2926;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .13;
+    background-image: radial-gradient(#9f786d .7px, transparent .7px);
+    background-size: 17px 17px;
+    z-index: 100;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 40px 20px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #fff 0 12%, transparent 35%),
+        radial-gradient(circle at 85% 75%, #f7d9d1 0 7%, transparent 34%),
+        linear-gradient(135deg, #fffaf7, #f8e5df);
+}
+
+.hero-inner {
+    text-align: center;
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+
+.tiny {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #9a6b60;
+}
+
+.hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 13vw, 145px);
+    font-weight: 400;
+    line-height: .9;
+    color: #6e3f37;
+    margin: 18px 0 10px;
+}
+
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 5vw, 54px);
+}
+
+.hero p {
+    margin: 20px auto 30px;
+    max-width: 590px;
+    line-height: 1.8;
+    color: #735b56;
+}
+
+.cta {
+    border: 1px solid #b98c81;
+    background: #6e3f37;
+    color: white;
+    border-radius: 999px;
+    padding: 15px 27px;
+    cursor: pointer;
+    box-shadow: 0 12px 28px #6e3f3730;
+    transition: .25s;
+}
+
+.cta:hover {
+    transform: translateY(-3px);
+}
+
+.float {
+    position: absolute;
+    opacity: .55;
+    animation: float 5s ease-in-out infinite;
+}
+
+.f1 {
+    left: 7%;
+    top: 18%;
+    font-size: 30px;
+}
+
+.f2 {
+    right: 10%;
+    top: 23%;
+    font-size: 22px;
+    animation-delay: 1s;
+}
+
+.f3 {
+    left: 15%;
+    bottom: 16%;
+    font-size: 19px;
+    animation-delay: 2s;
+}
+
+.f4 {
+    right: 8%;
+    bottom: 14%;
+    font-size: 35px;
+    animation-delay: .5s;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-14px) rotate(5deg);
+    }
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+section {
+    padding: 90px 20px;
+    position: relative;
+}
+
+.wrap {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.section-kicker {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #a06e62;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 7vw, 70px);
+    line-height: 1;
+}
+
+.center {
+    text-align: center;
+}
+
+/* =========================
+   ENVELOPE
+========================= */
+
+.envelope-zone {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #f5e8e3;
+}
+
+.envelope-wrap {
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.envelope {
+    width: min(520px, 88vw);
+    height: 330px;
+    position: relative;
+    background: #fffdfb;
+    border-radius: 8px;
+    box-shadow: 0 25px 60px #5c342a25;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.envelope::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.7%,
+            #ead4ce 50%,
+            transparent 50.5%
+        ),
+        linear-gradient(
+            225deg,
+            transparent 49.7%,
+            #ead4ce 50%,
+            transparent 50.5%
+        );
+}
+
+.flap {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 65%;
+
+    background: #fdf5f1;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 72%
+    );
+
+    transform-origin: top;
+    transition: 1s cubic-bezier(.2,.8,.2,1);
+}
+
+.seal {
+    position: absolute;
+    z-index: 6;
+
+    left: 50%;
+    top: 51%;
+
+    transform: translate(-50%, -50%);
+
+    width: 74px;
+    height: 74px;
+
+    border-radius: 50%;
+
+    background: #9b544c;
+    color: white;
+
+    display: grid;
+    place-items: center;
+
+    font-size: 30px;
+
+    box-shadow: 0 7px 20px #9b544c45;
+
+    transition: .4s;
+}
+
+.letter {
+    position: absolute;
+    z-index: 2;
+
+    left: 8%;
+    width: 84%;
+    height: 78%;
+    bottom: -47%;
+
+    background: #fffdf8;
+
+    border: 1px solid #eaded8;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: 1s cubic-bezier(.2,.8,.2,1);
+
+    box-shadow: 0 10px 25px #00000012;
+}
+
+.letter h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: #79443c;
+}
+
+.letter p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope.open .seal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
+}
+
+.envelope.open .letter {
+    bottom: 11%;
+    z-index: 5;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    margin-top: 50px;
+    display: grid;
+    gap: 24px;
+}
+
+.time-card {
+    background: #fff;
+    border: 1px solid #ecdcd6;
+    border-radius: 18px;
+    padding: 25px 28px;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.year {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: #9b544c;
+}
+
+.time-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+}
+
+.time-card p {
+    color: #765f5a;
+    line-height: 1.65;
+    margin-top: 5px;
+}
+
+/* =========================
+   DAD CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 45px;
+}
+
+.little-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid #eedbd4;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.little-card:hover {
+    transform: translateY(-5px);
+}
+
+.little-card .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.little-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+}
+
+.little-card p {
+    color: #765f5a;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+
+/* =========================
+   HEART SURGERY SECTION
+========================= */
+
+.surgery-section {
+    background: #fff8f4;
+}
+
+.surgery-card {
+    max-width: 800px;
+    margin: 45px auto 0;
+    background: #fffdf8;
+    padding: 50px 45px;
+    box-shadow: 0 18px 55px #5e352d1a;
+    border: 1px solid #ead8d1;
+    position: relative;
+}
+
+.surgery-card::before {
+    content: "♡";
+    position: absolute;
+    right: 24px;
+    top: 15px;
+    color: #c58a7e;
+    font-size: 38px;
+}
+
+.surgery-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.surgery-highlight {
+    margin: 30px 0;
+    padding: 25px;
+    border-left: 3px solid #9b544c;
+    background: #f9ece7;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+    background: #f2dfd9;
+}
+
+.big-letter {
+    max-width: 780px;
+    margin: 45px auto 0;
+    background: #fffdf8;
+    padding: 50px 45px;
+    box-shadow: 0 18px 55px #5e352d1a;
+    border: 1px solid #ead8d1;
+    position: relative;
+}
+
+.big-letter::before {
+    content: "♡";
+    position: absolute;
+    right: 24px;
+    top: 15px;
+    color: #c58a7e;
+    font-size: 38px;
+}
+
+.big-letter p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.65;
+    margin-bottom: 17px;
+}
+
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 46px;
+    color: #79443c;
+    margin-top: 20px;
+}
+
+/* =========================
+   CAKE
+========================= */
+
+.cake-zone {
+    text-align: center;
+    background: #fff8f4;
+}
+
+.cake {
+    width: 260px;
+    height: 120px;
+    background: #d99a8d;
+    border-radius: 15px 15px 28px 28px;
+    margin: 90px auto 0;
+    position: relative;
+    box-shadow: 0 18px 30px #7b433625;
+    cursor: pointer;
+}
+
+.cake::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    right: -8px;
+    top: -20px;
+    height: 45px;
+    background: #fff4ef;
+    border-radius: 50% 50% 30% 30%;
+    box-shadow: inset 0 -7px #efc5bb;
+}
+
+.candle {
+    position: absolute;
+    width: 12px;
+    height: 60px;
+    background: white;
+    top: -75px;
+    border-radius: 6px;
+    left: calc(50% - 6px);
+}
+
+.flame {
+    position: absolute;
+    width: 18px;
+    height: 27px;
+    background: #f1a04b;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    top: -29px;
+    left: -3px;
+    box-shadow: 0 0 25px #f1a04b;
+    animation: flicker .6s infinite alternate;
+}
+
+@keyframes flicker {
+    to {
+        transform: rotate(-45deg) scale(.82);
+    }
+}
+
+.cake-note {
+    margin-top: 25px;
+    color: #765f5a;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: #6e3f37;
+    color: #fff8f4;
+}
+
+.final .section-kicker {
+    color: #e8bdb2;
+}
+
+.final .section-title {
+    color: white;
+}
+
+.final p {
+    max-width: 650px;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: #f3ddd7;
+}
+
+.final button {
+    background: white;
+    color: #6e3f37;
+    border: 0;
+    padding: 15px 25px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#secret {
+    display: none;
+    margin: 28px auto 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    color: #f6c8be;
+    line-height: 1.4;
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999;
+    animation: rise 2.8s ease-out forwards;
+    font-size: 20px;
+}
+
+@keyframes rise {
+    to {
+        transform:
+            translateY(-120vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:760px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .big-letter,
+    .surgery-card {
+        padding: 35px 25px;
+    }
+
+    .big-letter p,
+    .surgery-card p {
+        font-size: 21px;
+    }
+
+    .surgery-highlight {
+        font-size: 22px;
+    }
+
+    .time-card {
+        grid-template-columns: 55px 1fr;
+    }
+}
+
+@media(max-width:500px) {
+
+    .envelope {
+        height: 270px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <span class="float f1">♡</span>
+    <span class="float f2">✦</span>
+    <span class="float f3">♡</span>
+    <span class="float f4">✧</span>
+
+    <div class="hero-inner">
+
+        <div class="tiny">
+            A very important birthday message
+        </div>
+
+        <h1>
+            Happy Birthday, Dad
+        </h1>
+
+        <h2>
+            from your only girl, Malak ♡
+        </h2>
+
+        <p>
+            Warning: this website contains embarrassing memories,
+            unlimited love, and one daughter named Malak who will always be
+            her dad's little girl.
+        </p>
+
+        <button
+            class="cta"
+            onclick="document.getElementById('envelopeSection').scrollIntoView()">
+
+            Open your surprise ↓
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     ENVELOPE
+========================= -->
+
+<section
+    class="envelope-zone"
+    id="envelopeSection">
+
+    <div class="center">
+
+        <div class="section-kicker">
+            Your first mission
+        </div>
+
+        <div class="section-title">
+            Open the letter
+        </div>
+
+        <p
+            style="
+            margin:15px 0 30px;
+            color:#765f5a;
+            ">
+
+            Click the envelope.
+            Don't pretend you're not curious.
+
+        </p>
+
+        <div
+            class="envelope-wrap"
+            onclick="openEnvelope()">
+
+            <div
+                class="envelope"
+                id="envelope">
+
+                <div class="flap"></div>
+
+                <div class="letter">
+
+                    <h3>
+                        Dear Dad...
+                    </h3>
+
+                    <p>
+                        You were my first hero, my safest place,
+                        and the person who somehow managed to survive
+                        raising me.
+                        And no matter how old I get, Hany, you will always
+                        be one of the most important people in my world. ♡
+                    </p>
+
+                </div>
+
+                <div class="seal">
+                    ♡
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TIMELINE
+========================= -->
+
+<section style="background:#fbefeb;">
+
+<div class="wrap">
+
+    <div class="center">
+
+        <div class="section-kicker">
+            Our unofficial history
+        </div>
+
+        <div class="section-title">
+            Then → now
+        </div>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="time-card">
+
+            <div class="year">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    The little girl era
+                </h3>
+
+                <p>
+                    When I was small enough to think
+                    you could fix literally anything.
+                    Honestly, I still kind of think that.
+                    To me, Dad you have always been the person
+                    I could look to when the world felt a little too big.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="time-card">
+
+            <div class="year">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    The growing-up era
+                </h3>
+
+                <p>
+                    You watched me become my own person
+                    while still somehow trying to protect me
+                    from absolutely everything.
+                    Somehow, you always knew when your daughter needed you.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="time-card">
+
+            <div class="year">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    The “I'm not a kid anymore” era
+                </h3>
+
+                <p>
+                    I may have gotten older,
+                    but I never stopped being your daughter.
+                    And I never will.
+                    I will always be your Malak,
+                    no matter how much I grow.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     DAD STARTER PACK
+========================= -->
+
+<section>
+
+<div class="wrap">
+
+    <div class="center">
+
+        <div class="section-kicker">
+            Dad starter pack
+        </div>
+
+        <div class="section-title">
+            Things you are famous for
+        </div>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="little-card">
+
+            <div class="icon">
+                🛡️
+            </div>
+
+            <h3>
+                Professional Protector
+            </h3>
+
+            <p>
+                Job description:
+                make sure your daughter is okay,
+                even when she insists she's perfectly fine.
+                Somehow, Dad always knows.
+            </p>
+
+        </div>
+
+
+        <div class="little-card">
+
+            <div class="icon">
+                😂
+            </div>
+
+            <h3>
+                Unlicensed Comedian
+            </h3>
+
+            <p>
+                Some jokes are funny.
+                Some are dad jokes.
+                Somehow, you continue anyway.
+                And somehow, I still laugh.
+            </p>
+
+        </div>
+
+
+        <div class="little-card">
+
+            <div class="icon">
+                🧭
+            </div>
+
+            <h3>
+                Human GPS
+            </h3>
+
+            <p>
+                Because apparently every journey begins
+                with “I know a shortcut.”
+            </p>
+
+        </div>
+
+
+        <div class="little-card">
+
+            <div class="icon">
+                ❤️
+            </div>
+
+            <h3>
+                My Forever Person
+            </h3>
+
+            <p>
+                Out of all the titles you have,
+                this is the one that means the most to me:
+                Dad.
+                My Hany.
+                My forever person.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HEART SURGERY
+========================= -->
+
+<section class="surgery-section">
+
+<div class="wrap">
+
+    <div class="center">
+
+        <div class="section-kicker">
+            A chapter I will never forget
+        </div>
+
+        <div class="section-title">
+            When I was scared for you
+        </div>
+
+    </div>
+
+
+    <div class="surgery-card">
+
+        <p>
+            Dad,
+        </p>
+
+        <p>
+            When you had to undergo heart surgery,
+            everything suddenly felt different.
+            You were the person I had always seen as strong,
+            protective, and somehow able to handle anything —
+            and suddenly, I was the one hoping with all my heart
+            that you would be okay.
+        </p>
+
+        <p>
+            I was scared in a way that is difficult to put into words.
+            I kept thinking about how much you mean to me and how much
+            of my life has you in it.
+            In those moments, I realized just how deeply I depend on
+            your presence, your voice, your advice, your jokes,
+            and simply knowing that my dad is there.
+        </p>
+
+        <div class="surgery-highlight">
+            “I just wanted my dad to be okay.”
+        </div>
+
+        <p>
+            I wished I could take away your fear and carry the difficult
+            part for you. I would have done anything to make things easier.
+            All I could do was hope, pray, and wait for the moment
+            I could know that you were okay.
+        </p>
+
+        <p>
+            That experience changed the way I look at time with you.
+            It reminded me not to take the little things for granted:
+            conversations, laughs, family moments, even the ordinary days.
+            Those are the moments I want more of with you.
+        </p>
+
+        <p>
+            I am so grateful that you made it through that difficult chapter.
+            And I want you to know that your daughter Malak loves you
+            more deeply than she probably knows how to say.
+        </p>
+
+        <div class="signature">
+            I need you here for a very long time. ♡
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HEARTFELT LETTER
+========================= -->
+
+<section class="letter-section">
+
+<div class="wrap">
+
+    <div class="center">
+
+        <div class="section-kicker">
+            No jokes for this part
+        </div>
+
+        <div class="section-title">
+            What I really want you to know
+        </div>
+
+    </div>
+
+
+    <div class="big-letter">
+
+        <p>
+            Dad,
+        </p>
+
+        <p>
+            I don't think I say it enough, but I am so grateful
+            that I get to call you my dad.
+            I am so lucky that I get to be your daughter,
+            and I hope you always know how much that means to me.
+        </p>
+
+        <p>
+            You have been there through every version of me —
+            the tiny girl, the dramatic girl, the stubborn girl,
+            and the girl who is still figuring life out.
+            Through all of them, you have loved me,
+            protected me, and made me feel like I never have
+            to face life alone.
+        </p>
+
+        <p>
+            Then came the time you had to undergo heart surgery.
+            I don't think I can fully explain how scared I felt.
+            Seeing someone as important to me as you face something
+            so serious made me realize, more than ever,
+            just how much you mean to me.
+        </p>
+
+        <p>
+            I remember worrying, praying, and wishing I could somehow
+            take away the fear and pain for you.
+            I wanted nothing more than for my dad to be okay.
+            In those moments, I realized how much of my heart
+            is tied to yours and how much I need you in my life.
+        </p>
+
+        <p>
+            That experience taught me not to take our ordinary moments
+            for granted.
+            The conversations, the laughs, the little things,
+            and simply knowing that you are there —
+            those are the things I want more of.
+            I want so many more memories with you, Hany.
+        </p>
+
+        <p>
+            I may grow older, but there will always be a part of me
+            that is your little girl.
+            And no matter where life takes me,
+            I hope you always know how deeply loved you are.
+        </p>
+
+        <p>
+            You are not just my dad.
+            You are my protector, one of my safest places,
+            and one of the biggest pieces of my heart.
+            I am endlessly grateful that you made it through
+            that difficult chapter and that I get to keep calling you Dad.
+        </p>
+
+        <p>
+            Happy birthday to my dad, my Hany, my protector,
+            my partner in crime, and one of the most important
+            people in my life.
+            I love you more than I could ever fit into a website,
+            a letter, or a thousand birthday messages.
+        </p>
+
+        <div class="signature">
+            Love, Malak — your only girl ♡
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CAKE
+========================= -->
+
+<section class="cake-zone">
+
+<div class="wrap">
+
+    <div class="section-kicker">
+        One last thing...
+    </div>
+
+    <div class="section-title">
+        Make a wish, Dad 🎂
+    </div>
+
+    <p class="cake-note">
+        Click the candle to blow it out.
+    </p>
+
+
+    <div
+        class="cake"
+        onclick="blowCandle()">
+
+        <div class="candle">
+
+            <div
+                class="flame"
+                id="flame">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+<div class="wrap">
+
+    <div class="section-kicker">
+        Happy Birthday, Hany
+    </div>
+
+    <div class="section-title">
+        If I could choose my dad...
+    </div>
+
+    <p>
+        I would still choose you.
+        Every single time.
+        And if I could ask for one thing,
+        it would simply be more time with you Dad.
+    </p>
+
+    <button
+        onclick="revealSecret()">
+
+        There is one more thing...
+
+    </button>
+
+
+    <div id="secret">
+
+        You're stuck with me forever.<br>
+        I love you more than words can say Dad.<br>
+        Love always, Malak. ♡
+
+    </div>
+
+</div>
+
+</section>
+
+
+<script>
+
+/* =========================
+   OPEN ENVELOPE
+========================= */
+
+function openEnvelope() {
+
+    const envelope =
+        document.getElementById("envelope");
+
+    envelope.classList.toggle("open");
+
+    if (
+        envelope.classList.contains("open")
+    ) {
+
+        burst(18);
+
+    }
+
+}
+
+
+/* =========================
+   BLOW OUT CANDLE
+========================= */
+
+function blowCandle() {
+
+    const flame =
+        document.getElementById("flame");
+
+    flame.style.animation = "none";
+    flame.style.opacity = "0";
+
+    burst(45);
+
+}
+
+
+/* =========================
+   FINAL SECRET
+========================= */
+
+function revealSecret() {
+
+    document.getElementById("secret")
+        .style.display = "block";
+
+    burst(70);
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function burst(count) {
+
+    const symbols = [
+        "♡",
+        "♥",
+        "✦",
+        "✧",
+        "❤"
+    ];
+
+    for (
+        let i = 0;
+        i < count;
+        i++
+    ) {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.textContent =
+            symbols[
+                Math.floor(
+                    Math.random()
+                    * symbols.length
+                )
+            ];
+
+        heart.style.left =
+            (Math.random() * 100) + "vw";
+
+        heart.style.top =
+            (70 + Math.random() * 25)
+            + "vh";
+
+        heart.style.fontSize =
+            (14 + Math.random() * 25)
+            + "px";
+
+        heart.style.animationDuration =
+            (1.8 + Math.random() * 2)
+            + "s";
+
+        document.body.appendChild(
+            heart
+        );
+
+        setTimeout(
+            () => heart.remove(),
+            4000
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
